@@ -1,0 +1,29 @@
+<div class="navbar">
+    <div class="userContent center">
+        <img class="a"src="https://th.bing.com/th/id/OIP.iXkiWaLP4oG8ZUyrcRCLMAHaHa?w=180&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+        <h4 class="name text-white">admin</h4>
+        <p class="mail text-white">admin@chubb.com</p>
+        <br>
+        <span class="text-white">Dashboard</span>
+    </div>
+   
+       
+  
+    <br><br>
+    <div class="menu">
+        <button mat-button class="menu-button mt-3" [routerLink]="['/admin/addproduct']" > 
+            <span class="text-white">Add Product</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['/admin/viewuser']" >
+            <span class="text-white">All Orders</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['/admin/viewproduct']">
+            <span class="text-white">View Products</span>
+        </button>
+        <button mat-button class="menu-button" [routerLink]="['/home']">
+            <span class="text-white">Log Out</span>
+        </button>
+  
+    </div>
+    
+  </div>

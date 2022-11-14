@@ -1,0 +1,89 @@
+
+<div class="row" *ngIf="!prevOrderData">
+  
+<div class="container">
+	<div class="message-box">
+	<div class="message-content">
+		<h2 class="success">No Order Yet</h2>
+		<p>Make your First Order and get many rewards...</p>
+	</div>
+	<div class="clear"></div>
+	</div>
+	<div class="message-shadow"></div>
+</div>
+</div>
+
+<h1 class="text-center"><i>Previous Orders</i></h1>
+<cdk-accordion class="example-accordion m-3" *ngIf="prevOrderData">
+  
+  <cdk-accordion-item 
+  *ngFor="let orderObj of prevOrderData; let index = index;"
+    #accordionItem="cdkAccordionItem"
+    class="example-accordion-item"
+    role="button"
+    tabindex="0"
+    [attr.id]="'accordion-header-' + index"
+    [attr.aria-expanded]="accordionItem.expanded"
+    [attr.aria-controls]="'accordion-body-' + index" >
+    <div class="example-accordion-item-header hd1" (click)="accordionItem.toggle()">
+      {{orderObj._id}}
+      <span class="example-accordion-item-description">
+        ({{orderObj.dateOfOrder| date:'MMM d,y'}})
+        Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+      </span>
+    </div>
+    <div
+      class="example-accordion-item-body"
+      role="region"
+      [style.display]="accordionItem.expanded ? '' : 'none'"
+      [attr.id]="'accordion-body-' + index"
+      [attr.aria-labelledby]="'accordion-header-' + index">
+      <table class="table">
+        <thead class="hd1">
+          <tr>
+            
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Image</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of orderObj.current_cart">
+        
+            <td>{{i.product_name}}</td>
+            <td><img  class="ig1" src={{i.product_Image}}></td>
+            <td>
+             
+                
+                
+                {{i.Quantity}}
+               
+                
+                
+    
+    
+            </td>
+            <td>{{i.price}}</td>
+            
+          </tr>
+          <tr>
+        
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total:{{orderObj.total_bill}}</td>
+           
+          </tr>
+         
+          
+        </tbody>
+        
+      
+    
+    </table>
+       
+    </div>
+  </cdk-accordion-item>
+</cdk-accordion>
+

@@ -1,0 +1,50 @@
+ <h1 class="text-center">Dairy Life</h1>
+
+  <mat-card-content>
+    <div class="row">
+        <mat-form-field  style="margin-left:6rem; width:75%" class="search-hero">
+            <mat-label>Search Here</mat-label>
+            <mat-label class="float-end"> <i class="fas fa-search"></i></mat-label>
+            <input matInput type="text" name="search" placeholder="What're you searching for?" [(ngModel)]="searchText">
+        </mat-form-field>
+        </div>
+  </mat-card-content>
+  
+ <div  class=" row m-2 row-cols-1 h-100 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+    <div class="cols mb-5" *ngFor="let i of mdata | filter:searchText | paginate
+    : {
+        itemsPerPage: tableSize,
+        currentPage: page,
+        totalItems: count
+      };let idx=index">
+<div class="card g-4 mt-3 mb-2 h-90" style="width: 15rem;" >
+    <img src={{i.product_Image}} class="card-img-top c1 w-100 h-60 imgone" alt="...">
+    <div class="card-body">
+      
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+            <p>{{i.product_name}}</p>
+        </div>
+        <p>Rs.{{i.price}}</p>
+      </div>
+      <button  class="btn btn-primary" (click)="onBought(i)"><i class="bi bi-cart"></i> Add to Cart</button>
+    </div> 
+  </div>
+</div> 
+
+</div> 
+<div class="d-flex justify-content-center">
+  <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)"
+  >
+  </pagination-controls>
+</div>
+
+
+
+
+
+
+

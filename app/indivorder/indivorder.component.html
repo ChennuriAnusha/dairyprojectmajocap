@@ -1,0 +1,24 @@
+<a href="/admin/viewuser">go back..</a>
+<span class="text-center"><h1><i>{{indOrder}}'s Order({{kid}})</i></h1></span>
+<div class="row mb-2">
+    <div class="col-md-6" *ngFor="let i of orderData">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 p-2 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static bg-white " >
+          <strong class="d-inline-block mb-2 text-primary">{{i.product_name}}</strong>
+          
+          <div class="mb-1 text-muted">Product_Id:{{i._id}}</div>
+          <div class="mb-1 text-muted">Quantity:{{i.Quantity}}</div>
+          <p class="card-text mb-auto">price:{{i.price}}</p>
+          <div class="mb-1 text-muted">Vendor:{{i.vendor_Name}}</div>
+          <div class="mb-1 text-muted">{{i.vendor_Contact}}</div>
+         
+        </div>
+        <div class="col-auto d-none d-lg-block">
+            <img src={{i.product_Image}} class="bd-placeholder-img bg-white" width="200" height="200">
+          <!-- <svg class="bd-placeholder-img" width="200" height="250" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+
+        </div>
+      </div>
+    </div>
+   
+  </div>

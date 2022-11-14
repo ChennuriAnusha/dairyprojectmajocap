@@ -1,0 +1,22 @@
+<h1 class="text-center"><i>All Orders</i></h1>
+<div class="row mb-2">
+    <div class="col-md-5 p-2" *ngFor="let i of userOrderData">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static bg-white">
+          <strong class="d-inline-block mb-2">Customer_Name:{{i.username}}</strong>
+          <strong class="d-inline-block mb-2 text-primary">Transaction_Id:{{i._id}}</strong>
+          <h3 class="mb-0">{{i.dateOfOrder | date:'MMM d,y'}}</h3>
+          <span>Amount paid:Rs.{{i.total_bill}}</span>
+          <div class="mb-1 text-muted">{{i['phoneNumber']}}</div>
+          <p class="card-text mb-auto">Address:{{i.Address}}</p>
+        
+        </div>
+       
+        <button type="button" class="btn btn-primary p-3" (click)="onView(i._id)">View</button>
+    </div>
+   
+  
+  </div>
+
+
+  

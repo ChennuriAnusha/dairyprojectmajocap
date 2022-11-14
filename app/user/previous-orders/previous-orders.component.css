@@ -1,0 +1,126 @@
+.ig1{
+    height:80px;
+    width:80px;
+}
+
+.example-accordion {
+    display: block;
+    max-width: 95%;
+    background-color: whitesmoke;
+  }
+  
+  .example-accordion-item {
+    display: block;
+    border: solid 1px #ccc;
+  }
+  
+  .example-accordion-item + .example-accordion-item {
+    border-top: none;
+  }
+  
+  .example-accordion-item-header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+  
+  .example-accordion-item-description {
+    font-size: 0.85em;
+    color: #999;
+  }
+  
+  .example-accordion-item-header,
+  .example-accordion-item-body {
+    padding: 16px;
+  }
+  
+  .example-accordion-item-header:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right top, #9eadc4, #96bbca, #99c7c6, #acd0bc, #cbd6b4);
+    
+  }
+  .example-accordion-item-header:active {
+  
+    background-image: linear-gradient(to right top, #9eadc4, #96bbca, #99c7c6, #acd0bc, #cbd6b4);
+    
+  }
+  
+  .example-accordion-item:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .example-accordion-item:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  body{
+    background-color:#E6E6E6;
+    font-family:Helvetica,Arial,sans-serif
+  }
+  h2.success{
+    font-size:22px;
+    color:#8F9945;
+    padding:0px;
+    margin-bottom:5px;
+    margin-top:15px;
+    font-weight:lighter;
+  }
+  h2.error{
+    font-size:22px;
+    color:#DD332E;
+    padding:0px;
+    margin-bottom:5px;
+    margin-top:15px;
+    font-weight:lighter;
+  }
+  p{
+    font-size:14px;
+    color:#666;
+    padding:0px;
+    margin:0px;line-height:16px;
+  }
+  .clear{clear:both;}
+  .container{
+    width:629px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10%;
+  }
+  .message-box{
+    background:#fff url(https://s3.amazonaws.com/flashypublic/mail-header-bg.png) no-repeat top left;
+    padding-top:40px;
+    padding-bottom:20px;
+    padding-left:20px;
+    padding-right:20px;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+    -moz-border-radius-bottomleft:7px;
+    -moz-border-radius-bottomright:7px;
+  }
+  .message-shadow{
+    background:transparent url(https://s3.amazonaws.com/flashypublic/mail-footer-bg.png) no-repeat center top;
+    height:24px;
+    clear:both;
+  }
+  .message-icon{
+    float:left;
+    width:80px;
+    display:inline;
+    margin-right:25px;
+  }
+  .message-content{
+    float:left;
+    display:inline;
+    width:484px;
+  }
+  .logo{
+    width:131px;margin-left:auto;
+    margin-right:auto;
+    padding-bottom:35px;
+  }
+
+  .hd1{
+    background:white
+  }

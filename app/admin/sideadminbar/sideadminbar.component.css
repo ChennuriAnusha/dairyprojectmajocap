@@ -1,0 +1,68 @@
+
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 58px 0 0; /* Height of navbar */
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+        width: 240px;
+        z-index: 600;
+        }
+        
+        .sidebar .active {
+        border-radius: 5px;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+        }
+        
+        .sidebar-sticky {
+        position: relative;
+        top: 0;
+        height: calc(100vh - 48px);
+        padding-top: 0.5rem;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        }
+        .navcol{
+            background-color: yellow;
+        }
+        
+        .a{
+          height: 140px;
+          width: 140px;
+          margin-top: 15px;
+          border-radius: 15px;
+        }
+        
+        .center {
+            flex-grow: 1;
+            overflow: hidden;
+            text-align: center;
+          }
+        
+        .menu-button{
+            display: block;
+            width: 100%;
+            position: relative;
+            width: 100%;
+            display:flex;
+            padding-left: 55px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .menu-button span{
+            margin-left: 6px;
+            color:rgb(0, 0, 0);
+        }
+        
+        .menu-button:hover{
+            background-color:darksalmon;
+        }
+        
+        .menu-button:focus{
+            background-color:darksalmon;
+        }
+        
+        

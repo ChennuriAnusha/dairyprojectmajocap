@@ -1,0 +1,44 @@
+
+<img class="wave" src="https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/bg.svg">
+		</div>
+		<div class="login-content">
+			<form class="example-form" [formGroup]="UserRegistrationForm" (ngSubmit)="OnSubmit()">
+				<img src="https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/avatar.svg">
+				<h2 class="title">Welcome</h2>
+                
+                    <div class="input-div one">
+                        <div class="i">
+                                <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div">
+                                <input type="text" class="input" placeholder="Username" formControlName="username">
+                        </div>
+                     </div>
+                     <div class="input-div one">
+                        <div class="i">
+                                <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div">
+                                <input type="text" class="input" placeholder="Email" formControlName="email">
+                        </div>
+                     </div>
+                     <div class="input-div pass">
+                        <div class="i"> 
+                             <i class="fas fa-lock"></i>
+                        </div>
+
+                        <div class="div">
+                             
+                             <input type="password"  placeholder="password" formControlName="password" class="input">
+                     </div>
+                  </div>
+           	
+            	<input type="submit" class="btn"  value="Register">
+            </form>
+        </div>
+    </div>
+    
+    

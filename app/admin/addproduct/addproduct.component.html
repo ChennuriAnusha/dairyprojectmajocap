@@ -1,0 +1,61 @@
+<!-- <div class="row mt-5">
+    <div class="col-sm-2 col-md-3"></div>
+    <div class="col-sm-8 col-md-6">
+        <form (ngSubmit)="oncreate()">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" name="product_name" [(ngModel)]="childModel.product_name"  placeholder="enter namee">
+                <label for="name">Product_Name</label>
+               </div>
+               <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="img" name="product_Image"  [(ngModel)]="childModel.product_Image" placeholder="enter namee">
+                <label for="img">Product_image</label>
+               </div>
+               <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="img" name="price"  [(ngModel)]="childModel.price" placeholder="enter namee">
+                <label for="img">Price</label>
+               </div>
+               <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="img" name="vendor_Name"  [(ngModel)]="childModel.vendor_Name" placeholder="enter namee">
+                <label for="img">vendor_Name</label>
+               </div>
+               <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="vendor_Contact"  [(ngModel)]="childModel.vendor_Contact" placeholder="enter namee">
+                <label for="img">vendor_Contact</label>
+               </div>
+               <button type="submit" class="btn btn-warning float-end">Add</button>
+        </form>
+        
+    </div>
+   <div class="col-sm-2 col-md-3"></div>
+
+</div> -->
+
+
+
+
+  <form (ngSubmit)="oncreate()">
+    
+    <fieldset>
+      <legend><span class="number">1</span>Enter New Product</legend>
+      <label for="name">Product Name:</label>
+      <input type="text" class="form-control" id="name" name="product_name" [(ngModel)]="childModel.product_name">
+      
+      <label for="universityname">Product_Image:</label>
+      <input type="text" class="form-control" id="img" name="product_Image"  [(ngModel)]="childModel.product_Image">
+      <label for="cityname">Price:</label>
+      <input type="text" class="form-control" id="img" name="price"  [(ngModel)]="childModel.price">
+      
+      <label for="mail">Vendor_Name:</label>
+      <input type="text" class="form-control" id="img" name="vendor_Name"  [(ngModel)]="childModel.vendor_Name">
+               
+      
+      <label for="contactnumber">Vendor_Contact</label>
+      <input type="text" class="form-control" name="vendor_Contact"  [(ngModel)]="childModel.vendor_Contact">
+      
+    </fieldset>
+    
+    
+   
+    <button type="submit" class="btn btn-warning">Add</button>
+  </form>
+  

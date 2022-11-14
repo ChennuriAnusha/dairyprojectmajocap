@@ -1,0 +1,50 @@
+
+<div class="pt-5" *ngIf="!totalpay()">
+  <img   src="https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/95974e121862329.Y3JvcCw5MjIsNzIxLDAsMTM5.png" alt="Paris" class="center">
+</div>
+
+<div class="p-5" style="overflow-x:auto;">
+  <table class="table bg-white"  *ngIf="totalpay()">
+    <thead>
+      <tr >
+        <th scope="col"></th>
+        <th scope="col">Product_Name</th>
+        <th scope="col">Product_Image</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">price</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of cartdata" >
+        <td></td>
+        <td scope="row">
+          {{i.product_name}}
+        </td>
+        <td><img  class="ig1" src={{i.product_Image}}></td>
+        <td>   <div class="quantity">
+          <button class="plus-btn p1" type="button" name="button" (click)="plus(i._id)">
+            <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" [(ngModel)]="i.Quantity">
+          <button class="minus-btn p2" type="button" name="button" (click)="minus(i._id)">
+            <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
+          </button>
+        </div></td>
+        <td>{{i.price}}</td>
+        <td scope="row">
+          <span class="delete-btn" (click)="onRemoveFromCart(i._id)"></span>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Total: Rs.{{totalpay()}}</td>
+        <td><button class="btn btn-success g1" (click)="onPay()">CheckOut</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+   
